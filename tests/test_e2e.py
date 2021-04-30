@@ -1,6 +1,7 @@
 from src.srp6a_py.client import SRP as SRPClient
 from src.srp6a_py.server import SRP as SRPServer
 from src.srp6a_py.modulus import get_params
+from base64 import b64encode
 
 USERNAME="TOTOLAFRITE"
 
@@ -43,5 +44,11 @@ class Test_generate_secret_and_verifier:
 
     M1 = srp_client.computeM1(B)
     M2 = srp_server.verifyM1(M1)
+
+    print("")
+    print(b64encode(M1).decode())
+    print('')
+    print(b64encode(M2).decode())
+    print(len(M1), len(M2))
 
     assert M1 == M2
