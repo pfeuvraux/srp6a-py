@@ -9,22 +9,18 @@ class Test_generate_secret_and_verifier:
 
   def test_e2e(self):
 
-    N, g = get_params(group=1024)
+    N, g = get_params()
     srp_group = {
       "N": N,
       "g": g
     }
 
     secret, salt = SRPClient.generate_secret("toto")
-    print('') # new line
-    print(salt) # public param
-    print(secret) # must be encrypted before getting stored onto the server
 
     vkey = SRPClient.generate_verifier(
       group=srp_group,
       secret=secret
     )
-    print(vkey) # verifier key, must be sent to the server
 
     srp_client = SRPClient(
       secret=secret,
