@@ -20,17 +20,6 @@ def long_to_bytes(n):
     l.reverse()
     return six.b(''.join(l))
 
-def bytes_to_int(data: bytes):
-  return int.from_bytes(data, byteorder="big", signed=False)
-
-def int_to_bytes(data: int):
-  print(data.bit_length())
-  return data.to_bytes(
-    length=data.bit_length(),
-    byteorder="big"
-  )
-
-
 def H(*args):
 
   shasum = sha384()

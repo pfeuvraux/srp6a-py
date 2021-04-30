@@ -1,0 +1,3 @@
+
+class SRPAuthenticationFailed(Exception):
+  pass
