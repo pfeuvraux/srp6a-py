@@ -71,5 +71,4 @@ class SRP:
       self.b,
       self.N
     )
-    print(S)
     return H(long_to_bytes(S))
