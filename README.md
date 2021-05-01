@@ -2,6 +2,8 @@
 
 This Python module provides SRP tools.
 
+:warning: **YOU NEED TO INSTALL [restless](http://github.com/pfeuvraux/restless) first! :warning:
+
 # Implementation details
 
 This SRP implementation hardens SRP-6a version:
