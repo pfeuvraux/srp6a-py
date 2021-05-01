@@ -6,14 +6,12 @@ from setuptools import (
 
 curr_dir = os.path.dirname(os.path.abspath(__file__))
 
-
 setup(
   name="srp6a-py",
-  version="0.0.1-dev",
   description="Just an easy-to-use SRP Python module",
   long_description="nope",
   license="WTFPL License",
-  url=None,
+  url="https://github.com/pfeuvraux/srp6a-py",
   author="Paul Feuvraux",
   author_email="pfeuvraux@gmail.com",
   classifier=[
@@ -26,7 +24,7 @@ setup(
   package_dir={"": "src"},
   packages=find_packages(where="src"),
   python_requires=">=3.8",
-  #sinstall_requires=install_requirements,
+  setup_requires=['setuptools_scm'],
+  use_scm_version=True,
   zip_safe=False,
-
 )
